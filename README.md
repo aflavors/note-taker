@@ -3,7 +3,6 @@
 ## Table of Contents
 - [Description](#Description)
 - [Usage](#Usage)
-- [License](#License)
 - [Questions](#Questions)
 
 ### Description
