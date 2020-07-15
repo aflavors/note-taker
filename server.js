@@ -2,6 +2,9 @@
 // DEPENDENCIES
 // ==============================================================================
 var express = require("express");
+var path = require("path");
+var fs = require("fs");
+const { v4: uuidv4 } = require('uuid');
 
 // ==============================================================================
 // CONFIGURATION
