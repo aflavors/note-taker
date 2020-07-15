@@ -40,4 +40,15 @@ app.post("/api/notes", function(req, res){
 })
 
 //DELETE /api/notes/:id from db.json
+app.delete("/api/notes/:id", function (req, res){
+    let savedNoteArray = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+    let deletedNoteID = req.params.id;
+    console.log("Deleted note ${deletedNoteID}");
+    savedNoteArray = savedNoteArray.filter(note => {
+        return note.id !== deletedNoteID;
+    })
+
+    fs.writeFileSync("./db/db.json", JSON.stringify(savedNoteArray));
+    res.json(savedNoteArray);
+})
 };
