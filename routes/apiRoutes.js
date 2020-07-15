@@ -23,8 +23,8 @@ app.get("/api/notes", function(req, res) {
 //POST /api/notes add new note to db.json
 app.post("/api/notes", function(req, res){
     let note = (req.body)
-    let id = uuidv4(); 
-    note.id = id
+    let noteID = uuidv4(); 
+    note.id = noteID
     let notesArray;
     let savedNotes = fs.readFileSync("./db/db.json","utf-8");
     notesArray = JSON.parse(savedNotes);
